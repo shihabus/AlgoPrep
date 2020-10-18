@@ -1,5 +1,5 @@
 // Given an Array and a sequence, validate if sequence is a subsequence or not
-// the give will have unique elements only(no repetition)
+// the give will have unique elements only(no repeatition)
 
 // ===== 1 ====
 
