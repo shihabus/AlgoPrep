@@ -26,7 +26,7 @@ getFibOfN(5);
 function getFibOfN(n, memoize = { 1: 0, 2: 1 }) {
   if (n in memoize) return memoize[n];
   else {
-    memoize[n] = getFibOfN(n - 1) + getFibOfN(n - 2);
+    memoize[n] = getFibOfN(n - 1,memoize) + getFibOfN(n - 2,memoize);
     return memoize[n];
   }
 }
