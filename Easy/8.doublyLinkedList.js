@@ -100,9 +100,28 @@ class DoublyLinkedList {
   // insert a node at position p
   // O(p) Time | O(1) Space
   insertAtPosition(position, nodeToInsert) {
+    //   if position is 1 call setHead
     if (position === 1) {
       this.setHead(nodeToInsert);
       return;
+    }
+
+    // else, iterate till position th node
+    let node = this.head;
+    let currentPosition = 1;
+    while (node !== null && currentPosition++ !== position) {
+      node = node.next;
+    }
+    
+    // if not null, call insert before
+    if (node !== null) {
+      this.insertBefore(node, nodeToInsert);
+    }
+
+    // if position is > length or tail node,
+    // call setTail
+    else {
+      this.setTail(nodeToInsert);
     }
   }
 
