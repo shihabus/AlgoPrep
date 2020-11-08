@@ -41,7 +41,7 @@ function twoNumberSum(arr, targetSum) {
 // ============== 3 ============
 // sort given array
 // set pointer L and R
-// until L<R
+// until L<R, i.e until it overlap or surpass
 // sum = arr[L]+arr[R]
 // if(sum===targetSum) return [arr[L],arr[R]]
 // else if(sum<targetSum) move L to right by 1 index
