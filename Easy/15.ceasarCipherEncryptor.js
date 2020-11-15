@@ -3,8 +3,10 @@
 
 // O(n) ST
 
+// ASCII
 // a --> 97
 // z --> 122
+
 function ceasarCipherEncryptor(string, key) {
   // we find the unicode of the char
   // add the key to the unicode
@@ -16,7 +18,8 @@ function ceasarCipherEncryptor(string, key) {
   // suppose given key is 54 --> 26 + 26 + 2,
   // i.e, it is equivalent to key being 2
   // if we don't take mod, we will end up getting a newCode greater
-  // our alphabet mappings, here which is 122
+  // our alphabet mappings, here which is 122 
+  // and getting a non-alphabetic char on conversion
   key = key % 26;
   for (const char of string) {
     const newChar = getNewChar(char, key);

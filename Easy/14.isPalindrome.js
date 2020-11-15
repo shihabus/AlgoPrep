@@ -1,6 +1,6 @@
 // check if a give string is palindrome
 
-// O(n^2) Time, bcz for each character, we create a new string
+// O(n^2) Time, bcz for each character, we create a new string (iterate+copy)
 // O(n) Space, since we create a new string to store the reversedString
 
 function isPalindrome(inputString) {

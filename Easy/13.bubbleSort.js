@@ -32,7 +32,7 @@ function bubbleSort(arr) {
         swap(i, i + 1, arr);
         isSorted = false;
       }
-      --iterationCount;
+      iterationCount++;
     }
   }
   return arr;

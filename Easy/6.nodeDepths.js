@@ -9,20 +9,10 @@
 // f(n,d)=d+f(n.left,d+1)+f(n.right,d+1)
 // f(n,d): sum of node depths of the node n, with depth d
 
+// ==== 1 ===
 // # recursive solution
 // we keep on calling the f(n,d), until we have exhausted all the nodes
 
-// # iterative solution
-// keep a running sum
-// use a stack, to which we push the root node(d:0) initially
-// when popping the stack, we push the child nodes(n.left, n.right) of the node being popped along with its depth (d+1)
-// we add the depth of popped node to the running sum
-// we continue this until the stack runs empty
-
-// # NB: when dealing any node, associate its depth to it
-
-// ==== 1 ===
-// # recursive
 // time: O(n), where n is no.of nodes
 // space: avg O(h), where h is height of BST
 
@@ -50,7 +40,15 @@ function calculateDepth(node, depth) {
 }
 
 // ==== 2 ===
-// # iterative
+// # iterative solution
+
+// keep a running sum
+// use a stack, to which we push the root node(d:0) initially
+// when popping the stack, we push the child nodes(n.left, n.right) of the node being popped along with its depth (d+1)
+// we add the depth of popped node to the running sum
+// we continue this until the stack runs empty
+
+// # NB: when dealing any node, associate its depth to it
 
 // time: O(n), where n is no.of nodes
 // space: avg O(h), where h is height of BST

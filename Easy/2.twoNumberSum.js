@@ -3,10 +3,10 @@ const arr = [3, 5, -4, 8, 11, -1, 6];
 const targetSum = 4;
 
 // ============== 1 ============
-// > run two loops, an inner and outter
+// > run two loops, an inner and outer
 // inner 0 -> array.length-1
-// outter inner+1 -> array.length
-// if sum(inner+outter)=== targetSum return[inner,outter]
+// outer inner+1 -> array.length
+// if sum(inner+outer)=== targetSum return[inner,outer]
 // else if no match, return []
 
 // O(n^2) time | O(1) space

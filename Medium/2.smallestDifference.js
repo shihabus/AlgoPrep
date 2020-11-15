@@ -49,7 +49,9 @@ function smallestDifference(arr1, arr2) {
     } else if (secondNumber < firstNumber) {
       currentDiff = firstNumber - secondNumber;
       idx2++;
-    } else {
+    }
+    // equal elements
+    else {
       return [firstNumber, secondNumber];
     }
 

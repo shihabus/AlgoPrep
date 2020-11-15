@@ -1,9 +1,9 @@
 // Find the closest Node in a BST given a target value
 
 // ===== 1 ======
-
 // average: O(log(n)) time(since BST) | O(log(n)) space(since recursive, we have log(n) frames in call stack)
 // In case of tree with single branch, worst: O(n) time | O(n) space
+
 function findClosestValueInBst(tree, target) {
   // to begin with we choose infinity as the closest.
   // It can be the first node.value too.

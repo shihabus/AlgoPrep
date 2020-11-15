@@ -164,7 +164,7 @@ class DoublyLinkedList {
     // it will handle the case where
     // the LinkedList just had a single node
 
-    this.this.removeNodeBindings(node);
+    this.removeNodeBindings(node);
   }
 
   removeNodeBindings(node) {
