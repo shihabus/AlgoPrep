@@ -28,7 +28,6 @@ function moveToEnd(arr, toMove) {
       swap(i, j, arr);
     }
     i++;
-    arr;
   }
   return arr;
 }

@@ -16,7 +16,7 @@ function findClosestValueInBstHelper(tree, target, closest) {
   if (tree === null) return closest;
 
   //  the value with smallest difference will be the closest
-  // |target-tree.value| < |closest-target|
+  // | target - tree.value | < | target - closest |
   // closest=tree.value
   if (Math.abs(target - tree.value) < Math.abs(target - closest)) {
     closest = tree.value;
