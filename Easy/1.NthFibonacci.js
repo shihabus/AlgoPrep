@@ -7,6 +7,9 @@
 // fib(2)=1
 
 // Time O(2^n) since each step inturn call the other two getFibOfN(recursion)
+/*
+if you create a graph for it you can see, the graph will have n levels and the no.of nodes increase as 1.......2.2.2-> 2^n
+*/
 // Space O(n) since we use call stack
 function getFibOfN(n) {
   if (n === 2) return 1;

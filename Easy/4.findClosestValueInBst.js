@@ -4,6 +4,39 @@
 // average: O(log(n)) time(since BST) | O(log(n)) space(since recursive, we have log(n) frames in call stack)
 // In case of tree with single branch, worst: O(n) time | O(n) space
 
+class BST {
+  constructor(value) {
+    this.value = value;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+const tree = new BST(10);
+tree.right = new BST(15);
+tree.left = new BST(5);
+tree.left.left = new BST(2);
+tree.left.right = new BST(5);
+tree.left.left.left = new BST(1);
+tree.right.left = new BST(13);
+tree.right.right = new BST(22);
+tree.right.left.right = new BST(14);
+
+/*
+
+         10
+        /   \
+       /     \
+      5       15
+     / \      / \
+    /   \    /   \
+   2     5  13   22
+  /           \  
+ 1            14
+
+*/
+
+
 function findClosestValueInBst(tree, target) {
   // to begin with we choose infinity as the closest.
   // It can be the first node.value too.
