@@ -59,5 +59,25 @@ function threeNumberSum(arr, targetSum) {
   return triplets;
 }
 
+// Time O(n^3) | Space O(n)
+function threeNumberSum(array, targetSum) {
+  const result = [];
+
+  // sort array
+  array.sort((a, b) => a - b);
+
+  for (let i = 0; i < array.length - 2; i++) {
+    for (let j = i + 1; j < array.length - 1; j++) {
+      const nominalZ = targetSum - (array[i] + array[j]);
+      for (let k = j + 1; k < array.length; k++) {
+        if (k !== j && k !== i && array[k] === nominalZ) {
+          result.push([array[i], array[j], array[k]]);
+        }
+      }
+    }
+  }
+  return result;
+}
+
 const input = [12, 3, 1, 2, -6, 5, -8, 6];
 console.log(threeNumberSum(input, 0));
