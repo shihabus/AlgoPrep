@@ -1,6 +1,16 @@
 // given an array and a value to be moved
 // to the end of array
 
+/**
+ * 
+  You're given an array of integers and an integer. Write a function that moves
+  all instances of that integer in the array to the end of the array and returns
+  the array.
+
+  The function should perform this in place (i.e., it should mutate the input
+  array) and doesn't need to maintain the order of the other integers.
+*/
+
 // O(N) Time
 // O(1) Space, since no auxiliary space
 function moveToEnd(arr, toMove) {
@@ -36,6 +46,42 @@ function swap(i, j, arr) {
   let temp = arr[i];
   arr[i] = arr[j];
   arr[j] = temp;
+}
+
+function moveElementToEnd(array, toMove) {
+  let L = 0;
+  let R = array.length - 1;
+  let temp = null;
+
+  while (L < R) {
+    // find a place for incoming toMove
+    // as long as the points don't
+    // pass each other, continue
+    // if we don't check this,
+    // we will swap already swapped values
+    while (L < R && array[R] === toMove) {
+      R--;
+    }
+
+    // find a toMove
+    // as long as the points don't
+    // pass each other, continue
+    // if we don't check this,
+    // we will swap already swapped values
+    while (L < R && array[L] !== toMove) {
+      L++;
+    }
+
+    temp = array[L];
+    array[L] = array[R];
+    array[R] = temp;
+
+    // once swapped advance pointers
+    R--;
+    L++;
+  }
+
+  return array;
 }
 
 const input = [2, 1, 2, 2, 2, 3, 4, 2];
