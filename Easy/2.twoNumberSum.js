@@ -1,3 +1,13 @@
+/**
+Write a function that takes in a non-empty array of distinct integers and an integer 
+representing a target sum. If any two numbers in the input array sum up to the target 
+sum, the function should return them in an array, in any order. If no two numbers sum 
+up to the target sum, the function should return an empty array.
+Note that the target sum has to be obtained by summing two different integers in 
+the array; you can't add a single integer to itself in order to obtain the target sum.
+You can assume that there will be at most one pair of numbers summing up to the target sum.
+*/
+
 // find a sum pair with a given target
 const arr = [3, 5, -4, 8, 11, -1, 6];
 const targetSum = 4;
@@ -56,7 +66,7 @@ function twoNumberSum(arr, targetSum) {
     const sum = arr[L] + arr[R];
     if (sum === targetSum) return [arr[L], arr[R]];
     else if (sum < targetSum) L++;
-    else if (sum > targetSum)  R--;
+    else if (sum > targetSum) R--;
   }
   return [];
 }
